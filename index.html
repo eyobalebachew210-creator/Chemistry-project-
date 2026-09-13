@@ -3,97 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chemical Reaction Rate Data Analyzer</title>
+
+<title>Chemical Reaction Rate Data Analyzer | Eyob Alebachew</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f4f7fb;
-  color:#172033;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f3f6fa;
+color:#172033;
+line-height:1.6
 }
 
 header{
-  background:linear-gradient(135deg,#173b7a,#2456a6);
-  color:white;
-  padding:35px 20px;
-  text-align:center;
+background:linear-gradient(135deg,#123b72,#2670b8);
+color:white;
+padding:45px 20px;
+text-align:center
 }
 
 header h1{
-  margin:0 0 10px;
-  font-size:30px;
+font-size:32px;
+margin:0 0 10px
 }
 
-header p{
-  margin:6px;
+header p{margin:5px}
+
+nav{
+background:#0d294d;
+padding:12px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:10
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 8px;
+font-size:14px
 }
 
 .container{
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
+max-width:1050px;
+margin:auto;
+padding:20px
 }
 
 .card{
-  background:white;
-  margin:18px 0;
-  padding:22px;
-  border-radius:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
+background:white;
+padding:25px;
+margin:20px 0;
+border-radius:16px;
+box-shadow:0 5px 18px rgba(0,0,0,.08)
 }
 
 h2{
-  color:#173b7a;
+color:#123b72;
+margin-top:0
+}
+
+h3{color:#2670b8}
+
+.badge{
+display:inline-block;
+padding:7px 12px;
+background:#e8f1fc;
+border-radius:20px;
+margin:4px;
+font-size:14px
+}
+
+.dashboard{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px
+}
+
+.stat{
+background:#eef5ff;
+padding:20px;
+border-radius:12px;
+text-align:center
+}
+
+.stat strong{
+display:block;
+font-size:26px;
+color:#123b72
 }
 
 table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:15px;
+width:100%;
+border-collapse:collapse;
+margin:15px 0
 }
 
 th,td{
-  border:1px solid #d8dee9;
-  padding:10px;
-  text-align:center;
+border:1px solid #d7dee8;
+padding:10px;
+text-align:center
 }
 
 th{
-  background:#eaf0fb;
+background:#e9f1fb
 }
 
 canvas{
-  width:100%;
-  max-height:350px;
-  margin-top:20px;
+width:100%;
+height:330px;
+margin-top:10px;
+border-radius:10px
 }
 
 .result{
-  margin-top:15px;
-  padding:15px;
-  border-radius:10px;
-  background:#eef5ff;
-  font-weight:bold;
+padding:15px;
+background:#eef8ee;
+border-left:5px solid #36834a;
+border-radius:8px;
+font-weight:bold
 }
 
 .note{
-  background:#fff8df;
-  border-left:5px solid #e0ad00;
-  padding:15px;
-  border-radius:8px;
+padding:16px;
+background:#fff8df;
+border-left:5px solid #d4a400;
+border-radius:8px
+}
+
+.warning{
+padding:16px;
+background:#fff0f0;
+border-left:5px solid #b33a3a;
+border-radius:8px
 }
 
 footer{
-  text-align:center;
-  padding:25px;
-  background:#172033;
-  color:white;
-  margin-top:30px;
+background:#172033;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:35px
+}
+
+@media(max-width:700px){
+header h1{font-size:25px}
+.dashboard{grid-template-columns:1fr}
+nav a{display:inline-block;margin:4px}
+.card{padding:18px}
+table{font-size:13px}
 }
 </style>
 </head>
@@ -101,280 +162,400 @@ footer{
 <body>
 
 <header>
-  <h1>🧪 Chemical Reaction Rate Data Analyzer</h1>
-  <p>Chemistry + Data Analysis Project</p>
-  <p><strong>Eyob Alebachew — Grade 11</strong></p>
+<h1>🧪 Chemical Reaction Rate Data Analyzer</h1>
+<p>Chemistry + Data Analysis Research Project</p>
+<p><strong>Eyob Alebachew | Grade 11</strong></p>
 </header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#results">Results</a>
+<a href="#theory">Theory</a>
+<a href="#method">Method</a>
+<a href="#future">Future Work</a>
+</nav>
 
 <div class="container">
 
-<section class="card">
-  <h2>About the Project</h2>
-  <p>
-    This project investigates how temperature, concentration,
-    and surface area can affect the rate of a chemical reaction.
-    The interpretation is based on collision theory.
-  </p>
+<section class="card" id="about">
+<h2>About This Project</h2>
 
-  <div class="note">
-    <strong>Research Integrity:</strong>
-    The datasets used in this website are illustrative.
-    They were not obtained from laboratory measurements.
-  </div>
+<p>
+This project investigates the relationship between reaction rate
+and three important factors: temperature, concentration, and
+surface area.
+</p>
+
+<div>
+<span class="badge">🧪 Chemistry</span>
+<span class="badge">📊 Data Analysis</span>
+<span class="badge">💻 Computing</span>
+<span class="badge">🔬 Scientific Research</span>
+</div>
+
+<h3>Research Question</h3>
+<p>
+How do temperature, concentration, and surface area affect the
+rate of a chemical reaction?
+</p>
+
+<h3>Hypothesis</h3>
+<p>
+Increasing temperature, concentration, or surface area is expected
+to increase reaction rate under comparable conditions.
+</p>
+
+<div class="note">
+<strong>Important research note:</strong>
+The numerical datasets in this project are illustrative.
+They were not obtained from laboratory measurements and must not
+be presented as experimental results.
+</div>
+</section>
+
+<section class="card" id="results">
+<h2>📊 Results Dashboard</h2>
+
+<div class="dashboard">
+
+<div class="stat">
+<strong>475.0%</strong>
+Temperature increase
+</div>
+
+<div class="stat">
+<strong>405.6%</strong>
+Concentration increase
+</div>
+
+<div class="stat">
+<strong>304.5%</strong>
+Surface-area increase
+</div>
+
+</div>
+
+<p>
+These percentages describe changes within separate illustrative
+datasets. They should not be interpreted as a scientific ranking
+of which factor is most important.
+</p>
 </section>
 
 <section class="card">
-  <h2>Research Question</h2>
-  <p>
-    How do temperature, concentration, and surface area affect
-    the rate of a chemical reaction?
-  </p>
+<h2>🌡️ 1. Temperature Analysis</h2>
 
-  <h2>Hypothesis</h2>
-  <p>
-    Increasing temperature, concentration, or surface area is
-    expected to increase reaction rate under comparable conditions.
-  </p>
+<table>
+<tr>
+<th>Temperature (°C)</th>
+<th>Illustrative Rate</th>
+</tr>
+<tr><td>10</td><td>0.20</td></tr>
+<tr><td>20</td><td>0.35</td></tr>
+<tr><td>30</td><td>0.55</td></tr>
+<tr><td>40</td><td>0.82</td></tr>
+<tr><td>50</td><td>1.15</td></tr>
+</table>
+
+<canvas id="tempChart"></canvas>
+
+<div class="result">
+From 10°C to 50°C, the illustrative rate increases by
+<strong>475.0%</strong>.
+</div>
 </section>
 
 <section class="card">
-  <h2>1. Temperature vs Reaction Rate</h2>
+<h2>🧪 2. Concentration Analysis</h2>
 
-  <table>
-    <tr>
-      <th>Temperature (°C)</th>
-      <th>Illustrative Rate</th>
-    </tr>
-    <tr><td>10</td><td>0.20</td></tr>
-    <tr><td>20</td><td>0.35</td></tr>
-    <tr><td>30</td><td>0.55</td></tr>
-    <tr><td>40</td><td>0.82</td></tr>
-    <tr><td>50</td><td>1.15</td></tr>
-  </table>
+<table>
+<tr>
+<th>Concentration</th>
+<th>Illustrative Rate</th>
+</tr>
+<tr><td>0.20</td><td>0.18</td></tr>
+<tr><td>0.40</td><td>0.36</td></tr>
+<tr><td>0.60</td><td>0.55</td></tr>
+<tr><td>0.80</td><td>0.73</td></tr>
+<tr><td>1.00</td><td>0.91</td></tr>
+</table>
 
-  <canvas id="tempChart"></canvas>
+<canvas id="concChart"></canvas>
 
-  <div class="result">
-    Increase from 10°C to 50°C:
-    <span id="tempResult"></span>
-  </div>
+<div class="result">
+From 0.20 to 1.00, the illustrative rate increases by
+<strong>405.6%</strong>.
+</div>
 </section>
 
 <section class="card">
-  <h2>2. Concentration vs Reaction Rate</h2>
+<h2>⚗️ 3. Surface Area Analysis</h2>
 
-  <table>
-    <tr>
-      <th>Concentration</th>
-      <th>Illustrative Rate</th>
-    </tr>
-    <tr><td>0.20</td><td>0.18</td></tr>
-    <tr><td>0.40</td><td>0.36</td></tr>
-    <tr><td>0.60</td><td>0.55</td></tr>
-    <tr><td>0.80</td><td>0.73</td></tr>
-    <tr><td>1.00</td><td>0.91</td></tr>
-  </table>
+<table>
+<tr>
+<th>Relative Surface Area</th>
+<th>Illustrative Rate</th>
+</tr>
+<tr><td>1</td><td>0.22</td></tr>
+<tr><td>2</td><td>0.39</td></tr>
+<tr><td>3</td><td>0.57</td></tr>
+<tr><td>4</td><td>0.74</td></tr>
+<tr><td>5</td><td>0.89</td></tr>
+</table>
 
-  <canvas id="concChart"></canvas>
+<canvas id="surfaceChart"></canvas>
 
-  <div class="result">
-    Increase from 0.20 to 1.00:
-    <span id="concResult"></span>
-  </div>
+<div class="result">
+From relative surface area 1 to 5, the illustrative rate increases
+by <strong>304.5%</strong>.
+</div>
+</section>
+
+<section class="card" id="theory">
+<h2>💡 Scientific Background</h2>
+
+<h3>Collision Theory</h3>
+<p>
+Collision theory states that reacting particles must collide with
+sufficient energy and an appropriate orientation for a chemical
+reaction to occur.
+</p>
+
+<h3>Temperature</h3>
+<p>
+Increasing temperature increases the average kinetic energy of
+particles. This can increase the frequency of effective collisions
+and the fraction of particles able to overcome the activation
+energy barrier.
+</p>
+
+<h3>Concentration</h3>
+<p>
+Increasing concentration generally means more reacting particles
+are present in a given volume, increasing opportunities for
+collisions.
+</p>
+
+<h3>Surface Area</h3>
+<p>
+For a solid reactant, increasing exposed surface area can provide
+more opportunities for collisions with other reactant particles.
+</p>
+</section>
+
+<section class="card" id="method">
+<h2>🔬 Methodology</h2>
+
+<ol>
+<li>Define the research question.</li>
+<li>Review collision theory and reaction-rate concepts.</li>
+<li>Use separate illustrative datasets for three variables.</li>
+<li>Calculate percentage changes.</li>
+<li>Visualize the datasets using graphs.</li>
+<li>Interpret the observed trends using chemistry theory.</li>
+<li>Identify limitations and propose future experimental work.</li>
+</ol>
+
+<div class="warning">
+<strong>Experimental limitation:</strong>
+No laboratory measurements were performed for this project.
+The displayed values are illustrative examples for educational
+data analysis.
+</div>
 </section>
 
 <section class="card">
-  <h2>3. Surface Area vs Reaction Rate</h2>
+<h2>📐 Mathematical Analysis</h2>
 
-  <table>
-    <tr>
-      <th>Relative Surface Area</th>
-      <th>Illustrative Rate</th>
-    </tr>
-    <tr><td>1</td><td>0.22</td></tr>
-    <tr><td>2</td><td>0.39</td></tr>
-    <tr><td>3</td><td>0.57</td></tr>
-    <tr><td>4</td><td>0.74</td></tr>
-    <tr><td>5</td><td>0.89</td></tr>
-  </table>
+<p>
+Percentage change was calculated using:
+</p>
 
-  <canvas id="surfaceChart"></canvas>
+<p>
+<strong>
+Percentage Change =
+((Final Value − Initial Value) / Initial Value) × 100
+</strong>
+</p>
 
-  <div class="result">
-    Increase from 1 to 5:
-    <span id="surfaceResult"></span>
-  </div>
+<ul>
+<li>Temperature: <strong>475.0%</strong></li>
+<li>Concentration: <strong>405.6%</strong></li>
+<li>Surface area: <strong>304.5%</strong></li>
+</ul>
 </section>
 
 <section class="card">
-  <h2>Scientific Explanation</h2>
+<h2>📖 Discussion</h2>
 
-  <h3>🌡️ Temperature</h3>
-  <p>
-    Higher temperature increases the average kinetic energy of
-    particles. More particles can therefore participate in
-    effective collisions.
-  </p>
+<p>
+All three illustrative datasets show a positive relationship between
+the investigated variable and reaction rate.
+</p>
 
-  <h3>🧪 Concentration</h3>
-  <p>
-    Increasing concentration generally increases the number of
-    reacting particles in a given volume, increasing collision
-    opportunities.
-  </p>
+<p>
+The temperature trend is consistent with collision theory because
+higher temperature increases particle kinetic energy and can
+increase the number of collisions with sufficient energy.
+</p>
 
-  <h3>⚗️ Surface Area</h3>
-  <p>
-    Increasing the exposed surface area of a solid reactant can
-    increase opportunities for collisions with other reactant
-    particles.
-  </p>
+<p>
+The concentration trend is consistent with increased collision
+opportunities when more particles occupy the same volume.
+</p>
 
-  <h3>💡 Collision Theory</h3>
-  <p>
-    Chemical reactions require effective collisions. Particles
-    must collide with sufficient energy and suitable orientation
-    for a reaction to occur.
-  </p>
+<p>
+The surface-area trend is consistent with increased exposure of a
+solid reactant to collisions with other particles.
+</p>
 </section>
 
 <section class="card">
-  <h2>Conclusion</h2>
-  <p>
-    The illustrative datasets show increasing reaction rates as
-    temperature, concentration, and surface area increase.
-    These trends are consistent with the qualitative predictions
-    of collision theory.
-  </p>
+<h2>⚠️ Limitations</h2>
 
-  <p>
-    However, because the data are illustrative rather than
-    experimental measurements, the results should not be treated
-    as laboratory evidence.
-  </p>
+<ul>
+<li>No laboratory experiment was conducted.</li>
+<li>The datasets are illustrative rather than experimental.</li>
+<li>No experimental uncertainty was calculated.</li>
+<li>No repeated laboratory trials were performed.</li>
+<li>The three datasets use different scales and conditions.</li>
+</ul>
+</section>
+
+<section class="card" id="future">
+<h2>🚀 Future Work</h2>
+
+<ul>
+<li>Conduct supervised laboratory experiments when permitted.</li>
+<li>Perform repeated trials.</li>
+<li>Calculate averages and uncertainties.</li>
+<li>Compare experimental data with theoretical predictions.</li>
+<li>Study the effect of catalysts.</li>
+<li>Develop a larger chemistry data-analysis platform.</li>
+</ul>
 </section>
 
 <section class="card">
-  <h2>Future Work</h2>
-  <ul>
-    <li>Conduct supervised laboratory measurements.</li>
-    <li>Repeat measurements and calculate averages.</li>
-    <li>Estimate experimental uncertainty.</li>
-    <li>Compare experimental results with theoretical predictions.</li>
-    <li>Investigate additional factors such as catalysts.</li>
-  </ul>
+<h2>🎓 Student Research Portfolio</h2>
+
+<p><strong>Researcher:</strong> Eyob Alebachew</p>
+<p><strong>Level:</strong> Grade 11</p>
+<p><strong>Field:</strong> Chemistry and Scientific Data Analysis</p>
+
+<p>
+This project demonstrates an interest in chemistry, quantitative
+reasoning, scientific communication, and computational data
+analysis.
+</p>
+</section>
+
+<section class="card">
+<h2>📚 References</h2>
+
+<ul>
+<li>General chemistry principles of chemical kinetics and collision theory.</li>
+<li>Standard introductory chemistry textbooks on reaction rates.</li>
+<li>Educational materials on activation energy and effective collisions.</li>
+</ul>
+
+<p>
+References can be expanded with specific textbook editions and
+academic sources when the final research report is prepared.
+</p>
+</section>
+
+<section class="card">
+<h2>📝 Research Declaration</h2>
+
+<p>
+I declare that the data presented in this website are clearly
+identified as illustrative and were not obtained from laboratory
+measurements. The purpose of this project is to demonstrate
+scientific reasoning, chemistry concepts, and data analysis.
+</p>
 </section>
 
 </div>
 
 <footer>
-  <p>© 2026 Eyob Alebachew</p>
-  <p>Chemistry Research & Data Analysis Project</p>
+<p><strong>Eyob Alebachew</strong></p>
+<p>Chemistry Research & Data Analysis Project — 2026</p>
 </footer>
 
 <script>
-function drawChart(canvasId, labels, values, xLabel, yLabel){
 
-  const canvas=document.getElementById(canvasId);
-  const ctx=canvas.getContext("2d");
+function drawChart(id, labels, values){
 
-  canvas.width=900;
-  canvas.height=350;
+const canvas=document.getElementById(id);
+const ctx=canvas.getContext("2d");
 
-  const left=70;
-  const right=30;
-  const top=30;
-  const bottom=60;
+canvas.width=900;
+canvas.height=330;
 
-  const width=canvas.width-left-right;
-  const height=canvas.height-top-bottom;
+const left=65;
+const right=25;
+const top=30;
+const bottom=55;
 
-  const max=Math.max(...values)*1.15;
-  const min=0;
+const w=canvas.width-left-right;
+const h=canvas.height-top-bottom;
 
-  ctx.clearRect(0,0,canvas.width,canvas.height);
+const max=Math.max(...values)*1.15;
 
-  ctx.beginPath();
-  ctx.moveTo(left,top);
-  ctx.lineTo(left,top+height);
-  ctx.lineTo(left+width,top+height);
-  ctx.stroke();
+ctx.clearRect(0,0,canvas.width,canvas.height);
 
-  ctx.font="14px Arial";
+ctx.beginPath();
+ctx.moveTo(left,top);
+ctx.lineTo(left,top+h);
+ctx.lineTo(left+w,top+h);
+ctx.stroke();
 
-  values.forEach((value,i)=>{
+ctx.font="14px Arial";
 
-    const x=left+(i/(values.length-1))*width;
-    const y=top+height-(value-min)/(max-min)*height;
+for(let i=0;i<values.length;i++){
 
-    ctx.beginPath();
-    ctx.arc(x,y,5,0,Math.PI*2);
-    ctx.fill();
+let x=left+(i/(values.length-1))*w;
+let y=top+h-(values[i]/max)*h;
 
-    ctx.fillText(labels[i],x-15,top+height+25);
-  });
-
-  ctx.beginPath();
-
-  values.forEach((value,i)=>{
-
-    const x=left+(i/(values.length-1))*width;
-    const y=top+height-(value-min)/(max-min)*height;
-
-    if(i===0){
-      ctx.moveTo(x,y);
-    }else{
-      ctx.lineTo(x,y);
-    }
-  });
-
-  ctx.stroke();
-
-  ctx.save();
-  ctx.translate(18,top+height/2);
-  ctx.rotate(-Math.PI/2);
-  ctx.fillText(yLabel,0,0);
-  ctx.restore();
-
-  ctx.fillText(xLabel,left+width/2-50,canvas.height-15);
+if(i===0){
+ctx.beginPath();
+ctx.moveTo(x,y);
+}else{
+ctx.lineTo(x,y);
 }
 
-function percentIncrease(start,end){
-  return ((end-start)/start*100).toFixed(1)+"%";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(x,y,5,0,Math.PI*2);
+ctx.fill();
+
+ctx.fillText(labels[i],x-15,top+h+25);
+}
+
+ctx.fillText("Illustrative Reaction Rate",
+left,20);
+
 }
 
 drawChart(
-  "tempChart",
-  ["10","20","30","40","50"],
-  [0.20,0.35,0.55,0.82,1.15],
-  "Temperature (°C)",
-  "Rate"
+"tempChart",
+["10","20","30","40","50"],
+[0.20,0.35,0.55,0.82,1.15]
 );
 
 drawChart(
-  "concChart",
-  ["0.20","0.40","0.60","0.80","1.00"],
-  [0.18,0.36,0.55,0.73,0.91],
-  "Concentration",
-  "Rate"
+"concChart",
+["0.20","0.40","0.60","0.80","1.00"],
+[0.18,0.36,0.55,0.73,0.91]
 );
 
 drawChart(
-  "surfaceChart",
-  ["1","2","3","4","5"],
-  [0.22,0.39,0.57,0.74,0.89],
-  "Surface Area",
-  "Rate"
+"surfaceChart",
+["1","2","3","4","5"],
+[0.22,0.39,0.57,0.74,0.89]
 );
 
-document.getElementById("tempResult").textContent =
-  percentIncrease(0.20,1.15);
-
-document.getElementById("concResult").textContent =
-  percentIncrease(0.18,0.91);
-
-document.getElementById("surfaceResult").textContent =
-  percentIncrease(0.22,0.89);
 </script>
 
 </body>
